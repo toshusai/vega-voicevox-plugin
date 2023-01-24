@@ -1,0 +1,30 @@
+{
+  "name": "vega-voicevox-plugin",
+  "version": "0.0.0",
+  "description": "VOICEVOX plugin for Vega",
+  "types": "dist/index.d.ts",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "./node_modules/typescript/bin/tsc --declaration --emitDeclarationOnly --declarationDir './dist' && node build.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/styled-components": "^5.1.26",
+    "esbuild": "^0.16.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6",
+    "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6"
+  },
+  "dependencies": {}
+}

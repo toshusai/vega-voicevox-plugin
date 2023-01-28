@@ -2,10 +2,9 @@ const { build } = require("esbuild");
 const { readFileSync, writeFileSync } = require("fs");
 const pkg = require("./package.json");
 
-const dependencies = Object.keys(pkg.dependencies ?? {});
 const peerDependencies = Object.keys(pkg.peerDependencies ?? {});
 
-const external = [...dependencies, ...peerDependencies];
+const external = [...peerDependencies];
 
 const entryFile = "src/index.ts";
 const shared = {

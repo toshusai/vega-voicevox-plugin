@@ -1,11 +1,14 @@
+import { BASE_URL } from "./const";
+import { Query } from "./types/Query";
+
 /**
  * https://github.com/VOICEVOX/voicevox_engine
  * @param text
  * @param speaker styleId
  */
-export const getQuery = async (text: string, speaker: number) => {
+export async function getQuery(text: string, speaker: number): Promise<Query> {
   const resonse = await fetch(
-    `http://localhost:50021/audio_query?text=${encodeURIComponent(
+    `${BASE_URL}/audio_query?text=${encodeURIComponent(
       text
     )}&speaker=${speaker}`,
     {
@@ -16,4 +19,4 @@ export const getQuery = async (text: string, speaker: number) => {
     }
   );
   return await resonse.json();
-};
+}

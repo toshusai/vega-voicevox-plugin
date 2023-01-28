@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6",
+    "types": "PATH_TO_TYPES",
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
@@ -26,5 +27,7 @@
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "short-uuid": "^4.2.2"
+  }
 }
